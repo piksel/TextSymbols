@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>9.0</LangVersion>
+    <AssemblyName>Piksel.TextSymbols</AssemblyName>
+    <RootNamespace>Piksel.TextSymbols</RootNamespace>
+    <PackageId>Piksel.TextSymbols</PackageId>
+    <Authors>nils måsén</Authors>
+    <RepositoryUrl>https://github.com/piksel/TextSymbols</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageVersion>0.1.1</PackageVersion>
+  </PropertyGroup>
+
+  <!-- SourceLink / NuGet -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+  </PropertyGroup>
+  <!-- / SourceLink / NuGet -->
+  
+</Project>
