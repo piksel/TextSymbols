@@ -1,16 +1,28 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <LangVersion>9.0</LangVersion>
+  <PropertyGroup Condition="'$(Version)' == ''" Label="Version">
+    <Major>0</Major>
+    <Minor>1</Minor>
+    <Patch>1</Patch>
+
+    <Version>$(Major).$(Minor).$(Patch)</Version>
+    <ProductVersion>$(Major).$(Minor).0.$(Patch)</ProductVersion>
+    <AssemblyVersion>$(Major).$(Minor).0.$(Patch)</AssemblyVersion>
+  </PropertyGroup>
+  
+  <PropertyGroup Label="Package">
     <AssemblyName>Piksel.TextSymbols</AssemblyName>
     <RootNamespace>Piksel.TextSymbols</RootNamespace>
     <PackageId>Piksel.TextSymbols</PackageId>
     <Authors>nils måsén</Authors>
     <RepositoryUrl>https://github.com/piksel/TextSymbols</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageVersion>0.1.1</PackageVersion>
+  </PropertyGroup>
+  
+  <PropertyGroup Label="Code">
+    <TargetFramework>net5.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>9.0</LangVersion>
   </PropertyGroup>
 
   <!-- SourceLink / NuGet -->
