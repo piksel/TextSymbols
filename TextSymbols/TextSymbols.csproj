@@ -17,6 +17,7 @@
     <Authors>nils måsén</Authors>
     <RepositoryUrl>https://github.com/piksel/TextSymbols</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
   
   <PropertyGroup Label="Code">
